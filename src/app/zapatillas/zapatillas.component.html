@@ -1,7 +1,48 @@
 <h2>{{titulo}}</h2>
+<p>Tenemos las zapatillas de las marcas </p>
+<p>Añadir macar</p>
+<p>
+<input type="text" [(ngModel)]="prueba" (keyup.enter)="mostrar()"/>
+<button (click)="getTenis()">Mostrar</button>
+<button (click)="addTenis()">Agregar</button>
+</p>
+<p>{{prueba}}</p>
 <ul>
-    <li>nike</li>
-    <li>adidas</li>
-    <li>whitehouse</li>
-    
+    <li *ngFor="let tenis of marcas; let indice=index">{{indice+' '+ tenis}}
+        <button (click)="borrarMarca(indice)">Borrar</button>
+    </li>
+</ul>
+
+<ul>
+
+    <li *ngFor="let tenis of zapatillas">
+
+        <span [ngStyle]="{
+         'text-decoration': !tenis.stock ? 'line-through' :'none' }"> {{tenis.nombre}} <strong [class.altoPrecio]="tenis.precio>=100">{{tenis.precio}}
+            </strong></span>
+
+        <span *ngIf="tenis.precio <= 80" 
+        [style.color]="tenis.precio <= 80 ? 'green' :'transparent'"
+        
+        >
+            En oferta</span>
+
+    </li>
+
+
+</ul>
+<p>El color con mayor stock son de :</p>
+<input type="text" [(ngModel)]="color"/>
+
+<ul [ngSwitch]="color">
+    <li *ngSwitchCase="'yellow'">
+        El color mayoria es <span [ngStyle]="{'background-color':color}">amarillo.</span>
+    </li>
+    <li *ngSwitchCase="'red'">
+        El color mayoria es<span [ngStyle]="{'background-color':color}"> rojo.</span>
+    </li>
+    <li *ngSwitchCase="'blue'">
+        El color mayoria es<span [ngStyle]="{'background-color':color}"> azul.</span>
+    </li>
+
 </ul>
