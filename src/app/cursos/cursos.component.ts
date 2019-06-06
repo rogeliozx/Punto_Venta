@@ -22,8 +22,10 @@ export class CursosComponent implements OnInit {
     this._route.params.subscribe((params:Params)=>{
       this.nombre=params.nombre;
         this.apellido=params.apellido;//poner un + aun lado del asignacion parsea automaticamente 
-console.log(this.nombre)
+console.log(this.nombre) 
     } );
   }
-
+redirigir(){
+  this._router.navigate(['/tenis']);
+}
 }

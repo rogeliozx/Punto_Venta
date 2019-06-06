@@ -1,3 +1,15 @@
-<p>
-  home works!
-</p>
+<h1>Pagina principal</h1>
+
+<div *ngIf="id; then identificado else noid">
+ 
+
+</div>
+
+<ng-template #identificado>
+  <button (click)="setId(false)">Log out</button>
+  <h3>Bienvenido Usuario </h3>
+</ng-template>
+<ng-template #noid>
+  <h3>usuario no valido, intente de nuevo</h3>
+  <button (click)="setId(true)">Inicia</button>
+</ng-template>

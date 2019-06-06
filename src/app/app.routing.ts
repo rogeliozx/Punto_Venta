@@ -7,6 +7,7 @@ import { ZapatillasComponent } from "./zapatillas/zapatillas.component";
 import {VideojuegosComponent } from "./Videojuegos/videojuegos.component";
 import {CursosComponent} from './cursos/cursos.component';
 import { HomeComponent } from './home/home.component';
+import { ExternoComponent } from './externo/externo.component';
 
 //Arrray configuracion de rutas
 const appRoutes:Routes=[
@@ -16,6 +17,7 @@ const appRoutes:Routes=[
 {path:'Videojuegos',component:VideojuegosComponent},
 {path:'cursos',component:CursosComponent},
 {path:'cursos/:nombre/:apellido',component:CursosComponent},
+{path:'externo',component:ExternoComponent},
 {path:'**', component:HomeComponent}
 ];
 //Exportar el modulo del ruter

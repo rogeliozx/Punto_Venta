@@ -1,0 +1,16 @@
+<label>{{fecha|date:'dd/MM/yy'}}</label>
+<hr>
+<div *ngIf="!usuario" >
+  loanding...
+</div>
+
+<div *ngIf="usuario">
+  <input type="text" [(ngModel)]="userid" (keyup.enter)="cargaUsuarios()"/>
+<ul >
+<li><span>Usuario {{usuario.id}}: <strong>{{usuario.first_name}} {{usuario.last_name}}</strong></span></li>
+<li><span>Email: <strong>{{usuario.email}}</strong></span></li>
+<li><img src="{{usuario.avatar}}" width="100px"></li>
+</ul>
+
+<!--<h2>{{usuario[0].first_name}}</h2>-->
+</div>

@@ -2,24 +2,29 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from "@angular/forms";
 import {routing, appRoutingProviders} from './app.routing';
+import { HttpClientModule } from "@angular/common/http";
 
 import { AppComponent } from './app.component';
 import {VideojuegosComponent} from './Videojuegos/videojuegos.component';
 import {ZapatillasComponent} from './zapatillas/zapatillas.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { HomeComponent } from './home/home.component';
+import { ExternoComponent } from './externo/externo.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     VideojuegosComponent,
     ZapatillasComponent,
     CursosComponent,
-    HomeComponent
+    HomeComponent,
+    ExternoComponent
   ],
-  imports: [
+  imports: [//aqui se agregan las librerias internas de angular o archivosc com routing
     BrowserModule,
     FormsModule,
-    routing
+    routing,
+    HttpClientModule
   ],
   providers: [
     appRoutingProviders

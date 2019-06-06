@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
-
+  public id:boolean;
+  constructor() {
+    this.id=false;
+   }
+     
   ngOnInit() {
   }
-
+  setId(id){
+    this.id=id;
+  }
 }
