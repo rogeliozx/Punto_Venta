@@ -2,12 +2,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import {VideojuegoComponent} from './Videojuego/videojuego.component';
-
+import {VideojuegosComponent} from './Videojuegos/videojuegos.component';
+import {ZapatillasComponent} from './zapatillas/zapatillas.component';
+import { CursosComponent } from './cursos/cursos.component';
 @NgModule({
   declarations: [
     AppComponent,
-    VideojuegoComponent
+    VideojuegosComponent,
+    ZapatillasComponent,
+    CursosComponent
   ],
   imports: [
     BrowserModule
