@@ -2,7 +2,8 @@ import { Component,OnInit } from '@angular/core';
 import { Zapatilla} from '../model/zapatilla';
 @Component({
     selector:'zapatillas',
-    templateUrl:'./zapatillas.component.html'
+    templateUrl:'./zapatillas.component.html',
+    styleUrls: ['./zapatillas.component.css']
 })
 export class ZapatillasComponent implements OnInit{
     public titulo:string="Componenete de zapatillas"

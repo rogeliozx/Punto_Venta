@@ -18,7 +18,12 @@
     <li *ngFor="let tenis of zapatillas">
 
         <span [ngStyle]="{
-         'text-decoration': !tenis.stock ? 'line-through' :'none' }"> {{tenis.nombre}} <strong [class.altoPrecio]="tenis.precio>=100">{{tenis.precio}}
+         'text-decoration': !tenis.stock ? 'line-through' :'none' }"> {{tenis.nombre}} 
+         <strong [class.altoPrecio]="tenis.precio>=100"
+            [ngClass]="{'fondorojo':tenis.precio>100,
+            'subrayado':tenis.marca==='Nike'
+        }" 
+            >{{tenis.precio}}
             </strong></span>
 
         <span *ngIf="tenis.precio <= 80" 

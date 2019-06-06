@@ -5,6 +5,19 @@
     Welcome to {{ title }}!
   </h1>
   <p>{{descripcion}} </p>
+<nav>
+  <a [routerLink]="['/home']" [routerLinkActive]="['active']">Home </a>
+  &nbsp;
+  <a [routerLink]="['/tenis']" [routerLinkActive]="['active']">Tenis </a>
+  &nbsp;
+  <a [routerLink]="['/Videojuegos']" [routerLinkActive]="['active']">Videojuegos </a>
+  &nbsp;
+  <a [routerLink]="['/curos']" [routerLinkActive]="['active']">Cursos </a>
 
-<zapatillas></zapatillas>
+</nav>
+<hr>
+<!---
+  <zapatillas></zapatillas>
+-->
+<router-outlet></router-outlet>
 </div>
