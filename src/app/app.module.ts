@@ -10,7 +10,8 @@ import {ZapatillasComponent} from './zapatillas/zapatillas.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { HomeComponent } from './home/home.component';
 import { ExternoComponent } from './externo/externo.component';
-
+import {CalculadoraPipe} from './pipes/calculadora.pipe';
+import { CotactoComponent } from './cotacto/cotacto.component'; 
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,9 @@ import { ExternoComponent } from './externo/externo.component';
     ZapatillasComponent,
     CursosComponent,
     HomeComponent,
-    ExternoComponent
+    ExternoComponent,
+    CalculadoraPipe,
+    CotactoComponent 
   ],
   imports: [//aqui se agregan las librerias internas de angular o archivosc com routing
     BrowserModule,

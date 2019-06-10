@@ -14,4 +14,9 @@ this.url="https://reqres.in";
     getUser(userid):Observable<any>{
         return this._http.get(this.url+'/api/users/'+userid);
     }
+    addUser(user):Observable<any>{
+        let json=JSON.stringify(user);
+        let head=new HttpHeaders().set('Content-Type','aplication/json');
+        return this._http.post(this.url+'/api/users',json,{headers:head})
+    }
 }
